@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GANAMOS.NET — WhatsApp</title>
+    <meta name="description" content="Bono del 30% con tu primera carga. Atención 24 hs. Escribinos por WhatsApp para crear tu usuario." />
+    <meta property="og:title" content="GANAMOS.NET — Bono 30%" />
+    <meta property="og:description" content="Bono del 30% en tu primera carga. Atención 24 hs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="bg-ganamos-canva.jpg" />
+    <style>
+      :root{
+        --bg:#0a0810; --text:#f8fafc; --muted:#cbd5e1; --wa:#25D366; --wa-dark:#128C7E;
+      }
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{margin:0;font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:var(--bg)}
+
+      /* Sección con la imagen exportada desde Canva como fondo completo */
+      .hero{position:relative; min-height:100svh; display:flex; align-items:end; justify-content:center; padding:clamp(16px,4vw,32px);}
+      .hero::before{content:""; position:fixed; inset:0; background:url('bg-ganamos-canva.jpg') center/cover no-repeat; filter:saturate(1.05); z-index:-2;}
+      /* Sutil overlay para mejorar legibilidad del botón */
+      .hero::after{content:""; position:fixed; inset:0; background:radial-gradient(1200px 800px at 50% 85%, rgba(10,10,20,.0), rgba(10,10,20,.35) 60%, rgba(10,10,20,.7) 100%); z-index:-1}
+
+      .cta-wrap{width:100%; max-width:720px; text-align:center; margin-bottom:clamp(6vh,10svh,12vh);}      
+      .cta{display:inline-flex; align-items:center; gap:10px; padding:16px 24px; border-radius:999px; text-decoration:none; font-weight:800; letter-spacing:.2px; background:var(--wa); color:#0b0f12; box-shadow:0 18px 40px rgba(37,211,102,.35); transition:transform .15s ease, box-shadow .15s ease;}
+      .cta:hover{transform:translateY(-1px); box-shadow:0 22px 46px rgba(37,211,102,.45)}
+      .cta:active{transform:translateY(0)}
+      .cta svg{width:18px; height:18px}
+
+      .legal{margin-top:12px; font-size:12px; color:var(--muted); text-shadow:0 1px 2px rgba(0,0,0,.6)}
+
+      /* En desktop, subimos un poco el botón para no tapar el centro del arte */
+      @media (min-width:920px){ .cta-wrap{margin-bottom:14vh} }
+    </style>
+  </head>
+  <body>
+    <section class="hero" role="main" aria-label="Landing con fondo Canva y botón a WhatsApp">
+      <div class="cta-wrap">
+        <a class="cta" href="https://wa.me/5492233448112?text=Hola%2C%20quiero%20un%20usuario%21" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+          <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.41c-.29-.15-1.67-.82-1.93-.91-.26-.1-.45-.15-.64.15-.19.29-.74.91-.91 1.1-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.76-1.44-1.69-1.61-1.98-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.15-.17.19-.29.29-.48.1-.19.05-.37-.02-.51-.07-.15-.64-1.55-.88-2.12-.23-.56-.47-.49-.64-.49h-.55c-.19 0-.5.07-.76.37-.26.29-1 1-1 2.44 0 1.44 1.02 2.84 1.16 3.03.15.19 2.01 3.07 4.86 4.31.68.29 1.21.46 1.63.59.69.22 1.32.19 1.82.12.56-.08 1.67-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.06-.12-.24-.19-.53-.34z"/><path d="M26.88 5.12C24.02 2.26 20.2.75 16.18.75S8.34 2.26 5.48 5.12A15.39 15.39 0 0 0 .75 16.18c0 2.69.69 5.34 2 7.67L1.06 31.25l7.58-1.92a15.48 15.48 0 0 0 7.54 1.95h.01c8.42 0 15.26-6.85 15.26-15.26 0-4.02-1.57-7.84-4.53-10.69zM16.2 28.5h-.01a12.31 12.31 0 0 1-6.28-1.72l-.45-.27-4.5 1.14 1.2-4.38-.29-.45a12.3 12.3 0 0 1-1.9-6.55c0-6.8 5.53-12.33 12.33-12.33 3.3 0 6.4 1.28 8.73 3.61a12.22 12.22 0 0 1 3.61 8.73c-.01 6.8-5.54 12.32-12.34 12.32z"/></svg>
+          Hola, quiero un usuario!
+        </a>
+        <div class="legal">+18 · Juego Responsable · Promociones sujetas a TyC</div>
+      </div>
+    </section>
+  </body>
+</html>
