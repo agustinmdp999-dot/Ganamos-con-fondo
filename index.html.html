@@ -19,7 +19,12 @@
 
       /* Sección con la imagen exportada desde Canva como fondo completo */
       .hero{position:relative; min-height:100svh; display:flex; align-items:end; justify-content:center; padding:clamp(16px,4vw,32px);}
-      .hero::before{content:""; position:fixed; inset:0; background:url('bg-ganamos-canva.jpg') center/cover no-repeat; filter:saturate(1.05); z-index:-2;}
+      .hero::before{content:""; position:fixed; inset:0; background:
+          /* Fallbacks en cadena: si el primero no carga, usa el siguiente */
+          url('bg-ganamos-canva.jpg') center/cover no-repeat,
+          url('bg-ganamos-canva.png') center/cover no-repeat,
+          radial-gradient(1200px 800px at 50% 50%, #1b1030, #0a0810);
+        filter:saturate(1.05); z-index:-2;}
       /* Sutil overlay para mejorar legibilidad del botón */
       .hero::after{content:""; position:fixed; inset:0; background:radial-gradient(1200px 800px at 50% 85%, rgba(10,10,20,.0), rgba(10,10,20,.35) 60%, rgba(10,10,20,.7) 100%); z-index:-1}
 
